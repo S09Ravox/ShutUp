@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="other.css">
+</head>
+<body id="body" class="overflow-hidden bg-black bg-cover relative overscroll-auto h-dvh w-full">
+    <header class="z-10 relative align-middle flex w-screen bg-black">
+        <div class="h-15 align-middle w-screen">
+            <div class="bg-black">
+                <a class="flex align-middle content-center" href="index.html">
+                    <img class="h-14 rounded-full my-5 ml-8" src="resources/darkmode_logo_1.png" alt="logo">
+                    <h2 class="p-2 ml-4 content-center align-middle font-light text-stone-100 text-4xl flex"><p class="content-center align-middle mr-2 font-extralight">Shut</p><p class="content-center align-middle font-bold">UP</p></h2>
+                </a>
+            </div>
+            <!--
+            <div>
+                <div class="border-r-4 bg-white"></div>
+                <div class="border-r-4 bg-white"></div>
+                <div class="border-r-4 bg-white"></div>
+            </div>
+            -->
+        </div>
+    </header>
+
+    <div class="z-20 w-100 h-px bg-white animate-pulse"></div>
+
+    <section class="-z-50 w-full -mt-24 h-dvh flex rounded-md">
+        <div id="sidebar" class="w-1/4 h-dvh -z-10 rounded-[16px] [box-shadow:0_4px_30px_rgba(0,_0,_0,_0.1)] backdrop-filter backdrop-blur-[10px]">
+
+        </div>
+
+        <div id="chatbar" class="w-3/4 h-dvh -z-10 float-right bg-transparent rounded-[16px] [box-shadow:0_4px_30px_rgba(0,_0,_0,_0.1)] backdrop-filter backdrop-blur-[10px]">
+            <div id="messageContainer">
+                <div class="message">
+                    <p>Salam!</p>
+                    <span class="timestamp">17 Avqust 2024 14:30</span>
+                </div>
+                <div class="message">
+                    <p>Necəsən?</p>
+                    <span class="timestamp">17 Avqust 2024 14:31</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function displayMessages(messages) {
+    const messageContainer = document.getElementById('messageContainer');
+    messageContainer.innerHTML = ''; // Köhnə mesajları təmizlə
+
+    messages.forEach(message => {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message');
+        messageElement.innerHTML = `
+            <p>${message.content}</p>
+            <span class="timestamp">${new Date(message.timestamp).toLocaleString()}</span>
+        `;
+        messageContainer.appendChild(messageElement);
+    });
+}
+
+// Mesajları serverdən al
+fetch('/get-messages')
+    .then(response => response.json())
+    .then(data => displayMessages(data));
+
+    </script>
+</body>
+</html> 

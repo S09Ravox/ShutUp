@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShutUP - Sign In / Sign Up</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="/src/resources/darkmode_logo_1.png" type="image/icon type">
+</head>
+<body class="bg-black flex items-center justify-center h-dvh w-dvw relative">
+    <div class="flex h-4/5 w-1/2 bg-white rounded-3xl">
+        <div id="signup" class="bg-[url('/src/resources/texture.jpg')] bg-cover h-full w-1/2 grid place-items-center rounded-l-3xl">
+            <form action='<?php $_SERVER ["PHP_SELF"]?>' method="post" class="grid place-items-center w-4/5">
+                <h1 class="font-bold text-gray-50 text-3xl p-4">Sign Up</h1>
+                <div class="mt-5 w-full h-12 relative flex rounded-xl">
+                    <input
+                      required=""
+                      class="peer w-full bg-opacity-45 bg-[#0f1410] text-[#fbfbfb] outline-none px-4 text-base rounded-xl bg-transparent border border-[#212121] focus:shadow-md"
+                      id="signup_username"
+                      type="text"
+                      name="signup_username"
+                    />
+                    <label
+                      class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150"
+                      for="address">Username</label>
+                </div>
+                <div class="mt-5 w-full h-12 relative flex rounded-xl">
+                    <input
+                      required=""
+                      class="peer w-full outline-none px-4 text-base rounded-xl bg-[#0f1410] text-[#fbfbfb] bg-opacity-45 border border-[#212121] focus:shadow-md"
+                      id="email"
+                      type="email"
+                      name="email"
+                    />
+                    <label  
+                      class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150
+                      for="address">Email address</label>
+                </div>
+                <div class="flex w-full justify-center">
+                    <div class="mr-3 mt-6 w-36 h-12 relative flex rounded-xl">
+                        <input
+                          required=""
+                          class="peer w-full bg-opacity-45 bg-[#0f1410] text-[#fbfbfb] outline-none px-4 text-base rounded-xl bg-transparent border border-[#212121] focus:shadow-md"
+                          id="first_name"
+                          type="text"
+                          name="first_name"
+                        />
+                        <label
+                          class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150
+                          for="address">First Name</label>
+                    </div>
+                    <div class="ml-3 mt-5 w-36 h-12 relative flex rounded-xl">
+                        <input
+                          required=""
+                          class="peer w-full bg-opacity-45 bg-[#0f1410] text-[#fbfbfb] outline-none px-4 text-base rounded-xl bg-transparent border border-[#212121] focus:shadow-md"
+                          id="second_name"
+                          type="text"
+                          name="second_name"
+                        />
+                        <label
+                          class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150
+                          for="address">Last Name</label>
+                    </div>
+                </div>
+                <div class="mt-5 w-full h-12 relative flex rounded-xl">
+                    <input
+                      required=""
+                      class="peer w-full bg-opacity-45 bg-[#0f1410] text-[#fbfbfb] outline-none px-4 text-base rounded-xl bg-transparent border border-[#212121] focus:shadow-md"
+                      id="password"
+                      type="password"
+                      name="password"
+                    />
+                    <label
+                      class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150
+                      for="address">Password</label>
+                </div>
+                <div class="mt-5 w-full h-12 relative flex rounded-xl">
+                    <input
+                      required=""
+                      class="peer w-full bg-opacity-45 bg-[#0f1410] text-[#fbfbfb] outline-none px-4 text-base rounded-xl bg-transparent border border-[#212121] focus:shadow-md"
+                      id="password_val"
+                      type="password"
+                      name="password_val"
+                    />
+                    <label
+                      class="rounded-md absolute top-1/2 translate-y-[-50%] bg-[#0f1410] bg-opacity-0 text-gray-50 left-4 px-2 peer-focus:top-0 peer-focus:bg-opacity-100 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#fbfbfb] peer-valid:-top-0 peer-valid:left-3 peer-valid:bg-opacity-100 peer-valid:text-sm peer-valid:text-[#fbfbfb] duration-150
+                      for="address">Confirm Password</label>
+                </div>
+                <input class="w-full rounded-2xl p-4 outline-none m-3 mt-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-extralight text-lg hover:shadow-md duration-150" type="submit" name="signup_button" value="Sign up"> 
+
+                <!-- <label class="block text-gray-700 text-sm font-bold mb-2 -translate-x-36" for="unique-input">Username</label>
+                    <input class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100" placeholder="Enter text here" type="text" id="unique-input"/>
+                <label class="block text-gray-700 text-sm font-bold mb-2 -translate-x-36" for="unique-input">First Name</label>
+                    <input class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100" placeholder="Enter text here" type="text" id="unique-input"/>
+                <label class="block text-gray-700 text-sm font-bold mb-2 -translate-x-36" for="unique-input">Last Name</label>
+                    <input class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100" placeholder="Enter text here" type="text" id="unique-input"/>
+                <label class="block text-gray-700 text-sm font-bold mb-2 -translate-x-36" for="unique-input">Email</label>
+                    <input class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100" placeholder="Enter text here" type="text" id="unique-input"/>
+                <label class="block text-gray-700 text-sm font-bold mb-2 -translate-x-36" for="unique-input">Password</label>
+                    <input class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100" placeholder="Enter text here" type="text" id="unique-input"/>
+                <input class="w-full rounded-2xl p-4 outline-none m-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-extralight text-lg" type="submit" name="signup_button" value="Sign up"> 
+            </form> -->
+            <?php if($_SERVER["REQUEST_METHOD"] == "POST") { // burda REQUEST_METHOD u chat sehifesinin url siynen deyisirik
+              $username = filter_input(INPUT_POST, "signup_username", FILTER_SANITIZE_SPECIAL_CHARS);
+              $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
+              $first_name = filter_input(INPUT_POST, "first_name", FILTER_SANITIZE_SPECIAL_CHARS);
+              $second_name = filter_input(INPUT_POST, "second_name", FILTER_SANITIZE_SPECIAL_CHARS);    
+              $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+              $password_val = filter_input(INPUT_POST, "password_val", FILTER_SANITIZE_SPECIAL_CHARS);
+      
+              if (empty($username) || empty($password)){
+                  echo"Enter username and password";
+              }
+              else {
+                  $hash = password_hash($password, PASSWORD_DEFAULT);
+                  $sql = "INSERT INTO users(username, email, first_name, last_name, password) VALUES('$username', '$email','$first_name','$second_name','$hash')";
+      
+                  try {
+                      mysqli_query($conn, $sql);
+                      $_SESSION["signup_username"] = $username;
+                      $_SESSION["signup_password"] = $hash;
+                      setcookie("signup_username", $username, time() + (86400 * 30), "/");
+                      header("Location: home.php");
+                  }
+                  catch (mysqli_sql_exception){
+                      echo "<p>This username has already taken</p>";
+                  }
+              }
+          } ?>
+
+            </form>
+        </div>
+        <div id="panel" style="transition-duration: 600ms; box-shadow: 0rem 0rem 5rem black;" class="bg-[url('/src/resources/texture.jpg')] bg-cover bg-center z-40 absolute grid h-4/5 w-1/4 place-items-center rounded-l-3xl">
+          
+          <button id="button" class="px-7 py-3 border-black rounded-full bg-white"><p id="button_par">Sign Up</p></button>
+        </div>
+        <div id="signin" class="bg-[url('/src/resources/texture.jpg')] bg-cover bg-right h-full grid place-items-center rounded-r-3xl w-1/2">
+            <form action="signin.php" method="post" class="grid place-items-center w-4/5">
+              
+              <h1 class="font-bold text-gray-50 text-3xl p-4">Sign In</h1>
+              <div class="mt-5 w-full h-12 relative flex rounded-xl">
+                <input
+                  required=""
+                  class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl bg-white border border-[#4070f4] focus:shadow-md"
+                  id="signin_username"
+                  type="text"
+                  name="signin_username"
+                />
+                <label
+                  class="rounded-md absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:-top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150"
+                  for="address">Username</label>
+            </div>
+            <div class="mt-5 w-full h-12 relative flex rounded-xl">
+              <input
+                required=""
+                class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl bg-white border border-[#4070f4] focus:shadow-md"
+                id="signin_password"
+                type="password"
+                name="signin_password"
+              />
+              <label
+                class="rounded-md absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:-top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150"
+                for="address">Password</label>
+            </div>
+            <label id="lbl-chkbx"><input type="checkbox" name="radio" id="checkbox"> Remember me </label>
+                <input class="w-full rounded-2xl p-4 outline-none m-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-extralight text-lg hover:shadow-md duration-150" type="submit" name="signin_button" value="Sign in">
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+      const panel = document.getElementById('panel');
+      const button = document.getElementById('button');
+      const buttonText = document.getElementById('button_par');
+      let isMovedRight = false;
+
+      button.addEventListener('click', () => {
+          if (isMovedRight) {
+            panel.style.transform = 'translateX(0%)';
+            panel.style.borderRadius = '1.5rem 0 0 1.5rem';
+            buttonText.textContent = "Sign Up";
+          } else {
+            panel.style.transform = 'translateX(100%)';
+            panel.style.borderRadius = '0 1.5rem 1.5rem 0';
+            buttonText.textContent = "Sign In";
+          }
+          isMovedRight = !isMovedRight;
+      });
+
+    </script>
+</body>
+</html>
